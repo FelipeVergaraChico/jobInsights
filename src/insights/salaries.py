@@ -5,8 +5,6 @@ from src.insights.jobs import ProcessJobs
 class ProcessSalaries(ProcessJobs):
     def __init__(self):
         super().__init__()
-        max_salary = int()
-        min_salary = int()
 
     def get_max_salary(self) -> int:
         salaries = [int(job['max_salary'])
