@@ -7,16 +7,16 @@ class ProcessJobs:
         self.jobs_list = list()
         self.jobs_type = list()
         self.jobs_filtered = list()
+
         self.delimiter = ','
         self.quotechar = '"'
 
     def read(self, path) -> List[dict]:
-        with open(path, enconding='utf-8') as file:
+        with open(path, encoding='utf-8') as file:
             file_reader = csv.DictReader(file,
                                          delimiter=self.delimiter,
                                          quotechar=self.quotechar)
             self.jobs_list = list(file_reader)
-            print(self.jobs_list[1])
         return self.jobs_list
 
     def get_unique_job_types(self) -> List[str]:
